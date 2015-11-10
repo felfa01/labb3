@@ -11,14 +11,14 @@ packages:
 
 runcmd:
     - pip install Flask
-    - git clone https://github.com/hakansonmarcus/labb3.git
+    - git clone https://github.com/felfa01/labb3.git
     - mv Labb3 home/ubuntu/Labb3
     - chmod -R 777 home/ubuntu/Labb3
     - pip install celery
     - pip install flower
-    - sudo rabbitmqctl add_user ma ha
-    - sudo rabbitmqctl add_vhost maha
-    - sudo rabbitmqctl set_permissions -p maha ma ".*" ".*" ".*"
+    - sudo rabbitmqctl add_user felix pass
+    - sudo rabbitmqctl add_vhost doktorn
+    - sudo rabbitmqctl set_permissions -p doktorn felix ".*" ".*" ".*"
     - sudo -H -u ubuntu bash -c "python runTasks.py &"
     - sudo -H -u ubuntu bash -c "celery flower -A tasks &"
 
