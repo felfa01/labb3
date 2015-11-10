@@ -11,7 +11,7 @@ packages:
 
 runcmd:
     - pip install Flask
-    - git clone https://github.com/hakansonmarcus/labb3.git
+    - git clone https://github.com/felfa01/labb3.git
     - mv Labb3 home/ubuntu/Labb3
     - chmod -R 777 home/ubuntu/Labb3
     - pip install celery
